@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+<head>
+<title>Teledyne Lecroy - HDMI SRC CT 1.4b Report</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<style type="text/css">
+body {background-color: #edf8ff;color: black}
+a {color: black;}
+table.std {margin-left: auto;margin-right: auto;background-color: white;border-collapse: collapse;border: 1px solid black;width: 90%;box-shadow: 2px 2px 5px grey,-1px -1px 2px grey;}
+td {padding: 3px;border: 1px solid black;text-align: center}
+table.std table {width: 97%;left: 2%;right: 2%;}
+#header, #footer {width: 95%;background-color: #f1b913;}
+.left {text-align: left;}
+.right {text-align: right}
+.center {text-align: center}
+.gold {background-color: #f1b913}
+td.noborder {border: none}
+td.nvl {width: 50%;text-align: right;font-weight: bold;padding-right: 5px;border-right: none}
+td.nvr {width: 50%;text-align: left;padding-left: 5px;border-left: none}
+td.hdr {background-color: #f1b913; font-size: 16pt; font-weight: bold}
+td.subhdr {background-color: silver; font-weight: bold}
+.header3 {font-family:helvitica, sans-serif;font-size:2.0em;text-shadow: 2px 2px 5px #000000;color: white;}
+#ctinfo {width: 90%}
+td.stpass {background-color: lime; font-weight: bold;width: 80px}
+td.stfail {background-color: red; font-weight: bold;width: 80px}
+td.sterr  {background-color: red; font-weight: bold;width: 80px}
+td.stskip {background-color: silver; font-weight: bold;width: 80px}
+td.stnotex {background-color: white; font-weight: bold;width: 80px}
+td.stcancel {background-color: yellow; font-weight: bold;width: 80px}
+td.stother {background-color: powderblue; font-weight: bold;width: 80px}
+.cdfkey {text-align: left;padding-left: 20px;}
+.cdfsubkey {background-color: silver;font-weight: bold;font-style: italic;text-align: left;padding-left: 20px;}
+td.cdfhdr {font-weight: bold}
+td.cttest {BACKGROUND-COLOR: #f1b913;text-align: left;FONT-SIZE: 14pt;FONT-WEIGHT: bold;}
+.cttest2 {FONT-SIZE: 10pt}
+td.ctsub {text-align: left;TEXT-INDENT: 10pt; FONT-WEIGHT: bold}
+.bullet {FONT-SIZE: 16pt}
+.note {FONT-SIZE: 10pt; COLOR: darkblue;}
+.error {FONT-SIZE: 10pt; COLOR: darkred;}
+.warn {FONT-SIZE: 10pt; COLOR: darkorange;}
+.subtitle {font-size: 10pt;font-weight: bold;font-style: italic;color: blue;text-align: left;border-bottom: none}
+.index {width: 16%;}
+
+</style>
+</head>
+<body>
+<table id="header" class="std">
+<tr><td class="left noborder">February 17, 2017 9:34 AM</td><td class="right noborder"><a href="http://www.quantumdata.com/">www.quantumdata.com</a></td></tr>
+<tr><td colspan="2" class="header3 noborder">HDMI Source Compliance Test Report<br>CTS 1.4b</td></tr>
+</table>
+<p></p><table id="ctinfo" class="std">
+<tr><td class="right gold">Results Name:</td><td><b>31D</b></td><td class="right gold">Manufacturer:</td><td><b></b></td></tr>
+<tr><td class="right gold">Date Tested:</td><td><b>January 9, 2017 7:46 PM</b></td><td class="right gold">Model Name:</td><td><b></b></td></tr>
+<tr><td class="right gold"><b>Overall Status:</b></td><td class="stpass" style="width: auto">Pass</td><td class="right gold">Port Tested:</td><td><b>1</b></td></tr>
+</table>
+<p><br></p><table class="std"><tr><td class="hdr" colspan="6">Report Index / Summary</td></tr>
+<tr>
+<td class="index"><a href="#7-16">Test 7-16</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-17">Test 7-17</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-18">Test 7-18</a></td>
+<td class="index stpass">Pass</td>
+</tr>
+<tr>
+<td class="index"><a href="#7-19">Test 7-19</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-21">Test 7-21</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-22">Test 7-22</a></td>
+<td class="index stpass">Pass</td>
+</tr>
+<tr>
+<td class="index"><a href="#7-23">Test 7-23</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-24">Test 7-24</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-25">Test 7-25</a></td>
+<td class="index stpass">Pass</td>
+</tr>
+<tr>
+<td class="index"><a href="#7-26">Test 7-26</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-27">Test 7-27</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-28">Test 7-28</a></td>
+<td class="index stpass">Pass</td>
+</tr>
+<tr>
+<td class="index"><a href="#7-29">Test 7-29</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-30">Test 7-30</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-31">Test 7-31</a></td>
+<td class="index stpass">Pass</td>
+</tr>
+<tr>
+<td class="index"><a href="#7-32">Test 7-32</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-33">Test 7-33</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-33a">Test 7-33a</a></td>
+<td class="index stpass">Pass</td>
+</tr>
+<tr>
+<td class="index"><a href="#7-34">Test 7-34</a></td>
+<td class="index stpass">Pass</td>
+<td class="index"><a href="#7-39">Test 7-39</a></td>
+<td class="index stpass">Pass</td>
+<td class="index" colspan="2"><a href="#cdf">&nbsp;&nbsp;CDF&nbsp;&nbsp;</a></td>
+</tr>
+<tr>
+<td class="index" colspan="2"><a href="#envinfo">&nbsp;&nbsp;Equipment Info&nbsp;&nbsp;</a></td>
+<td class="index" colspan="2">&nbsp;</td><td class="index" colspan="2">&nbsp;</td></tr>
+</table>
+<p><a name="cdf"></a></p>
+<table class="std"><tr><td class="hdr" colspan="2">Capabilities Declaration Form (CDF)</td></tr>
+<tr><td class="subhdr" colspan="2">Product Information</td></tr>
+<tr><td class="cdfkey">Connector Model</td><td>&nbsp;</td></tr>
+<tr><td class="cdfkey">Connector Vendor</td><td>&nbsp;</td></tr>
+<tr><td class="cdfkey">HDMI_output_count</td><td>1</td></tr>
+<tr><td class="cdfkey">Manufacturer</td><td>&nbsp;</td></tr>
+<tr><td class="cdfkey">Model Name</td><td>&nbsp;</td></tr>
+<tr><td class="cdfkey">Port Tested</td><td>1</td></tr>
+<tr><td class="subhdr" colspan="2">Options</td></tr>
+<tr><td class="cdfkey">Source_AR_Converter</td><td>YES</td></tr>
+<tr><td class="cdfkey">Source_AVI_Info_Available</td><td>YES</td></tr>
+<tr><td class="cdfkey">Source_AVI_Required</td><td>YES</td></tr>
+<tr><td class="cdfkey">Source_AVI_Supported</td><td>YES</td></tr>
+<tr><td class="cdfkey">Source_AdobeRGB</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_AdobeYCC601</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_Alt_Colorimetry</td><td>YES</td></tr>
+<tr><td class="cdfkey">Source_CN_Cinema</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_CN_Game</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_CN_Photo</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_HDMI_YCbCr</td><td>YES</td></tr>
+<tr><td class="cdfkey">Source_Non_CEA_Formats</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_Q_FullRange</td><td>YES</td></tr>
+<tr><td class="cdfkey">Source_YQ_FullRange</td><td>YES</td></tr>
+<tr><td class="cdfkey">Source_sYCC601</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_xvYCC</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_Deep_Color</td><td>YES</td></tr>
+<tr><td class="subhdr" colspan="2">Formats</td></tr>
+<tr><td class="cdfkey">(1) 640x480p @ 60 Hz 4/3</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(2) 720x480p @ 60 Hz 4/3</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(3) 720x480p @ 60 Hz 16/9</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(4) 1280x720p @ 60 Hz 16/9</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(5) 1920x1080i @ 60 Hz 16/9</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(6) 1440x480i @ 60 Hz 4/3</td><td>Not Supported</td></tr>
+<tr><td class="cdfkey">(7) 1440x480i @ 60 Hz 16/9</td><td>Not Supported</td></tr>
+<tr><td class="cdfkey">(16) 1920x1080p @ 60 Hz 16/9</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(17) 720x576p @ 50 Hz 4/3</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(18) 720x576p @ 50 Hz 16/9</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(19) 1280x720p @ 50 Hz 16/9</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(20) 1920x1080i @ 50 Hz 16/9</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">(21) 1440x576i @ 50 Hz 4/3</td><td>Not Supported</td></tr>
+<tr><td class="cdfkey">(22) 1440x576i @ 50 Hz 16/9</td><td>Not Supported</td></tr>
+<tr><td class="cdfkey">(31) 1920x1080p @ 50 Hz 16/9</td><td>24, 30, 36</td></tr>
+<tr><td class="cdfkey">Source_Additional_Formats</td><td>None</td></tr>
+<tr><td class="subhdr" colspan="2">Other Outputs</td></tr>
+<tr><td class="cdfkey">Source_1080i50_Other</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_1080i60_Other</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_480p60_Other</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_576p50_Other</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_720p50_Other</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_720p60_Other</td><td>NO</td></tr>
+<tr><td class="subhdr" colspan="2">Audio</td></tr>
+<tr><td class="cdfkey">Max_Condition</td><td>&nbsp;</td></tr>
+<tr><td class="cdfkey">Source_Basic_Audio</td><td>YES</td></tr>
+<tr><td class="cdfkey">Source_HBRA</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_Max_Fs_2Ch</td><td>48 kHz</td></tr>
+<tr><td class="cdfkey">Source_Max_Fs_MultiCh</td><td>32 kHz</td></tr>
+<tr><td class="cdfkey">Source_NonPCM_MaxFs</td><td>N/A</td></tr>
+<tr><td class="cdfkey">Source_NonPCM_Types</td><td>None</td></tr>
+<tr><td class="cdfkey">Source_One_Bit_Audio</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_PCM_Channels</td><td>2</td></tr>
+<tr><td class="cdfkey">Source_HBRA_Formats</td><td>&nbsp;</td></tr>
+<tr><td class="subhdr" colspan="2">3D Formats</td></tr>
+<tr><td class="cdfkey">Source_3D</td><td>NO</td></tr>
+<tr><td class="cdfsubkey">Source_Mandatory_3D_Video_Formats</td><td>&nbsp;</td></tr>
+<tr><td class="cdfkey">(19) 1280x720p @ 50 Hz (Frame packing)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(19) 1280x720p @ 50 Hz (Top-and-Bottom)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(20) 1920x1080i @ 50 Hz (Side-by-Side (Half))</td><td>NO</td></tr>
+<tr><td class="cdfkey">(32) 1920x1080p @ 23.98/24 Hz (Frame packing)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(32) 1920x1080p @ 23.98/24 Hz (Top-and-Bottom)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(4) 1280x720p @ 59.94/60 Hz (Frame packing)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(4) 1280x720p @ 59.94/60 Hz (Top-and-Bottom)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(5) 1920x1080i @ 59.94/60 Hz (Side-by-Side (Half))</td><td>NO</td></tr>
+<tr><td class="cdfsubkey">Source_Other_Primary_3D_Video_Formats</td><td>&nbsp;</td></tr>
+<tr><td class="cdfkey">(16) 1920x1080p @ 59.94/60 Hz (Top-and-Bottom)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(19) 1280x720p @ 50 Hz (Side-by-Side (Half))</td><td>NO</td></tr>
+<tr><td class="cdfkey">(20) 1920x1080i @ 50 Hz (Frame packing)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(31) 1920x1080p @ 50 Hz (Top-and-Bottom)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(32) 1920x1080p @ 23.98/24 Hz (Side-by-Side (Half))</td><td>NO</td></tr>
+<tr><td class="cdfkey">(34) 1920x1080p @ 29.97/30 Hz (Top-and-Bottom)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(34) 1920x1080p @ 30 Hz (Frame packing)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(4) 1280x720p @ 59.94/60 Hz (Side-by-Side (Half))</td><td>NO</td></tr>
+<tr><td class="cdfkey">(5) 1920x1080i @ 59.94/60 Hz (Frame packing)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(60) 1280x720p @ 23.98/24 Hz (Frame packing)</td><td>NO</td></tr>
+<tr><td class="cdfkey">(62) 1280x720p @ 29.97/30 Hz (Frame packing)</td><td>NO</td></tr>
+<tr><td class="subhdr" colspan="2">4K x 2K Formats</td></tr>
+<tr><td class="cdfkey">(1) 4K x 2K 29.97, 30 Hz</td><td>YES</td></tr>
+<tr><td class="cdfkey">(2) 4K x 2K 25 Hz</td><td>NO</td></tr>
+<tr><td class="cdfkey">(3) 4K x 2K 23.98, 24 Hz</td><td>NO</td></tr>
+<tr><td class="cdfkey">(4) 4K x 2K 24 Hz (SMPTE)</td><td>NO</td></tr>
+<tr><td class="cdfkey">Source_4Kx2K</td><td>YES</td></tr>
+</table>
+<p><br><a name="7-16"></a></p><table class="std"><tr><td class="cttest">Test 7-16<br><span class="cttest2">Legal Codes</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (2,3) 720x480p @ 60 Hz, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: [Illegal 10-bit code]Verify that all TMDS chrs belong to either Control, DI GB, Vid GB, TERC4 and Video</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: [Inconsistent ch. coding] If any TMDS Chr. does not use consistent encoding across all 3 Ch.</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (5) 1920x1080i @ 60 Hz, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: [Illegal 10-bit code]Verify that all TMDS chrs belong to either Control, DI GB, Vid GB, TERC4 and Video</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: [Inconsistent ch. coding] If any TMDS Chr. does not use consistent encoding across all 3 Ch.</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-17"></a></p><table class="std"><tr><td class="cttest">Test 7-17<br><span class="cttest2">Basic Protocol</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (2,3) 720x480p @ 60 Hz, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that ENC_EN code is not detected in window of opportunity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify 12pix of Control period before transition to next character</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify Control period prior to the DI preamble should not have DI preamble control code</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Inconsistent/Illegal DI or Video preamble, 8 pix match the CTLx val for any other 7pix</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify Data Island Leading Guard Band:Exp Vals Ch0:0x28e,0x271,0x163,0x2c3, Ch1-Ch2:0x133</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify Data Island Trailing Guard Band:Exp Vals Ch0:0x28e,0x271,0x163,0x2c3, Ch1-Ch2:0x133</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: verify DI TERC4 encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify first Chr following the Leading GB should NOT have TERC4 ch0, bit 3==1</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Any other Chr prior to trailing GB should have TERC4 ch0, bit 3==1</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify DI Len. is not 0 and is integral of 32 pix and no. of pkts are <=18</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: BCH Parity check</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>12: Video Guard Band:Exp Vals 0x2cc, 0x133, 0x2cc</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>13: Legal Video Data codes</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (5) 1920x1080i @ 60 Hz, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that ENC_EN code is not detected in window of opportunity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify 12pix of Control period before transition to next character</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify Control period prior to the DI preamble should not have DI preamble control code</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Inconsistent/Illegal DI or Video preamble, 8 pix match the CTLx val for any other 7pix</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify Data Island Leading Guard Band:Exp Vals Ch0:0x28e,0x271,0x163,0x2c3, Ch1-Ch2:0x133</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify Data Island Trailing Guard Band:Exp Vals Ch0:0x28e,0x271,0x163,0x2c3, Ch1-Ch2:0x133</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: verify DI TERC4 encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify first Chr following the Leading GB should NOT have TERC4 ch0, bit 3==1</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Any other Chr prior to trailing GB should have TERC4 ch0, bit 3==1</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify DI Len. is not 0 and is integral of 32 pix and no. of pkts are <=18</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: BCH Parity check</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>12: Video Guard Band:Exp Vals 0x2cc, 0x133, 0x2cc</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>13: Legal Video Data codes</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-18"></a></p><table class="std"><tr><td class="cttest">Test 7-18<br><span class="cttest2">Extended Control Period</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (2,3) 720x480p @ 60 Hz, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify Extended Control Period within 50ms</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (5) 1920x1080i @ 60 Hz, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify Extended Control Period within 50ms</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-19"></a></p><table class="std"><tr><td class="cttest">Test 7-19<br><span class="cttest2">Packet Types</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (2,3) 720x480p @ 60 Hz, Basic Audio, AI=1
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Data Island at least once per 2 video fields</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check valid Packet types</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check valid Null packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Check valid ACR packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Check valid Audio Sample packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Check valid General Control Packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Check valid ACP Packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Check valid ISRC1 Packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Check valid ISRC2 Packets</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (2,3) 720x480p @ 60 Hz, Basic Audio, AI=0, PREQ: ACP, ISRC1 or ISRC2 found in Iter 01
+<ul type="square">
+<li class="note">Required Iter 01 failed.
+</li>
+</ul>
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 03: (5) 1920x1080i @ 60 Hz, Basic Audio, AI=1
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Data Island at least once per 2 video fields</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check valid Packet types</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check valid Null packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Check valid ACR packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Check valid Audio Sample packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Check valid General Control Packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Check valid ACP Packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Check valid ISRC1 Packets</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Check valid ISRC2 Packets</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 04: (5) 1920x1080i @ 60 Hz, Basic Audio, AI=0, PREQ: ACP, ISRC1 or ISRC2 found in Iter 03
+<ul type="square">
+<li class="note">Required Iter 03 failed.
+</li>
+</ul>
+</td><td class="stskip">Skipped</td></tr>
+</table>
+<p><br><a name="7-21"></a></p><table class="std"><tr><td class="cttest">Test 7-21<br><span class="cttest2">Minimum Format Support</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: CDF Check Only; No DUT setup required.
+<ul type="square">
+<li class="note">Supported: 640x480p @ 59.94/60Hz 4:3 (Format 1)
+</li>
+<li class="note">Supported: 720x480p @ 59.94/60Hz 4:3 (Format 2) or 16:19 (Format 3)
+</li>
+<li class="note">Supported: 720x576p @ 50Hz 4:3 (Format 17) or 16:9 (Format 18)
+</li>
+</ul>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-22"></a></p><table class="std"><tr><td class="cttest">Test 7-22<br><span class="cttest2">Additional Format Support</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: CDF Check Only; No DUT setup required.
+<ul type="square">
+<li class="note">Source_480p60_Other == 'N'
+</li>
+<li class="note">Source_720p60_Other == 'N'
+</li>
+<li class="note">Source_1080i60_Other == 'N'
+</li>
+<li class="note">Source_576p50_Other == 'N'
+</li>
+<li class="note">Source_720p50_Other == 'N'
+</li>
+<li class="note">Source_1080i50_Other == 'N'
+</li>
+</ul>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-23"></a></p><table class="std"><tr><td class="cttest">Test 7-23<br><span class="cttest2">Pixel Encoding - RGB to RGB-only sink</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (1) 640x480p @ 60 Hz, Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for RGB encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (2,3) 720x480p @ 60 Hz, Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for RGB encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 03: (4) 1280x720p @ 60 Hz, Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for RGB encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 04: (5) 1920x1080i @ 60 Hz, Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for RGB encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 05: (16) 1920x1080p @ 60 Hz, Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for RGB encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 06: (17,18) 720x576p @ 50 Hz, Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for RGB encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 07: (19) 1280x720p @ 50 Hz, Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for RGB encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 08: (20) 1920x1080i @ 50 Hz, Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for RGB encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 09: (31) 1920x1080p @ 50 Hz, Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for RGB encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-24"></a></p><table class="std"><tr><td class="cttest">Test 7-24<br><span class="cttest2">Pixel Encoding - YCbCr to YCbCr Sink</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (1) 640x480p @ 60 Hz, YCbCr Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for YCC encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (2,3) 720x480p @ 60 Hz, YCbCr Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for YCC encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 03: (4) 1280x720p @ 60 Hz, YCbCr Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for YCC encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 04: (5) 1920x1080i @ 60 Hz, YCbCr Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for YCC encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 05: (16) 1920x1080p @ 60 Hz, YCbCr Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for YCC encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 06: (17,18) 720x576p @ 50 Hz, YCbCr Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for YCC encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 07: (19) 1280x720p @ 50 Hz, YCbCr Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for YCC encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 08: (20) 1920x1080i @ 50 Hz, YCbCr Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for YCC encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 09: (31) 1920x1080p @ 50 Hz, YCbCr Pixel Encoding Content
+<ul type="square">
+<li class="note">Visual verification: The image was transmitted with the correct pixel encoding.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Y1 and Y0 of AVI for YCC encoding</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: CDF field Source_Q_FullRange==Y</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-25"></a></p><table class="std"><tr><td class="cttest">Test 7-25<br><span class="cttest2">Video Format Timing</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (1) 640x480p @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (2,3) 720x480p @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 03: (4) 1280x720p @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 04: (5) 1920x1080i @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 05: (16) 1920x1080p @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 06: (17,18) 720x576p @ 50 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 07: (19) 1280x720p @ 50 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 08: (20) 1920x1080i @ 50 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 09: (31) 1920x1080p @ 50 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-26"></a></p><table class="std"><tr><td class="cttest">Test 7-26<br><span class="cttest2">Pixel Repetition</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (1) 640x480p @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: If no AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: If AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (2,3) 720x480p @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: If no AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: If AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 03: (4) 1280x720p @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: If no AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: If AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 04: (5) 1920x1080i @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: If no AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: If AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 05: (16) 1920x1080p @ 60 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: If no AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: If AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 06: (17,18) 720x576p @ 50 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: If no AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: If AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 07: (19) 1280x720p @ 50 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: If no AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: If AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 08: (20) 1920x1080i @ 50 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: If no AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: If AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 09: (31) 1920x1080p @ 50 Hz
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: If no AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: If AVI is transmitted verify the pixel rep params</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-27"></a></p><table class="std"><tr><td class="cttest">Test 7-27<br><span class="cttest2">AVI InfoFrame</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (1) 640x480p @ 60 Hz 4:3, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 4:3
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (2) 720x480p @ 60 Hz 4:3, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 4:3
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 03: (3) 720x480p @ 60 Hz 16:9, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 16:9
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 04: (4) 1280x720p @ 60 Hz 16:9, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 16:9
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 05: (5) 1920x1080i @ 60 Hz 16:9, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 16:9
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 06: (16) 1920x1080p @ 60 Hz 16:9, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 16:9
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 07: (17) 720x576p @ 50 Hz 4:3, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 4:3
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 08: (18) 720x576p @ 50 Hz 16:9, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 16:9
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 09: (19) 1280x720p @ 50 Hz 16:9, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 16:9
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 10: (20) 1920x1080i @ 50 Hz 16:9, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 16:9
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 11: (31) 1920x1080p @ 50 Hz 16:9, known Content AR
+<ul type="square">
+<li class="note">Visual aspect ratio checks were not performed. (Content aspect ratio was not known to the Operator)
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify that CDF field Source_AVI_Required is set correctly</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 16:9
+</li>
+</ul>
+</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-28"></a></p><table class="std"><tr><td class="cttest">Test 7-28<br><span class="cttest2">IEC 60958 / IEC 61937</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (2,3) 720x480p @ 60 Hz, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the repetition period of B bit</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the nominal Frame Rate</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-29"></a></p><table class="std"><tr><td class="cttest">Test 7-29<br><span class="cttest2">ACR</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (2,3) 720x480p @ 60 Hz, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify N parameter value</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify CTS parameter value</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify CTS transmitting interval</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (2,3) 720x480p @ 60 Hz, Deep Color 36 bpp, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify N parameter value</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify CTS parameter value</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify CTS transmitting interval</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-30"></a></p><table class="std"><tr><td class="cttest">Test 7-30<br><span class="cttest2">Audio Sample Packet Jitter</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (2,3) 720x480p @ 60 Hz, 48 kHz 2 Channel PCM or Compressed Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify audio sample jitter</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-31"></a></p><table class="std"><tr><td class="cttest">Test 7-31<br><span class="cttest2">Audio InfoFrame</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (2,3) 720x480p @ 60 Hz, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Check Audio Infoframe placement, once every two video field.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Check Packet header HB0(0x84) HB1(0x01) HB2(0x0A)</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Check Packet Body</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-32"></a></p><table class="std"><tr><td class="cttest">Test 7-32<br><span class="cttest2">Audio Sample Packet Layout</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: Any supported format, Basic Audio
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Audio sample pkt layout(0), check for valid combination of Sample prsnt and B</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-33"></a></p><table class="std"><tr><td class="cttest">Test 7-33<br><span class="cttest2">Interoperability with DVI</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: Any supported format, DVI
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: DVI Sink, no HDMI VSDB nor any other VSDB, No GB or DI expected</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: Any supported format, HDMI VSDB = 5
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: VSDB >=5, Data Island at least once per 2 video fields</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: VSDB >=5, Video field should have GB</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 03: Any supported format, HDMI VSDB > 5
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: VSDB >=5, Data Island at least once per 2 video fields</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: VSDB >=5, Video field should have GB</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-33a"></a></p><table class="std"><tr><td class="cttest">Test 7-33a<br><span class="cttest2">Interoperability with multiple VSDB</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: Any supported format
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: VSDB >=5, Video field should have GB</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: VSDB >=5, Data Island at least once per 2 video fields</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-34"></a></p><table class="std"><tr><td class="cttest">Test 7-34<br><span class="cttest2">Deep Color</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 02: (1) 640x480p @ 60 Hz, Deep Color 36 bpp
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the GCP values</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the TMDS clock</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify the GCP values when default bit is set.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify the Hsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify the Vsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 03: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 04: (2,3) 720x480p @ 60 Hz, Deep Color 36 bpp
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the GCP values</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the TMDS clock</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify the GCP values when default bit is set.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify the Hsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify the Vsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 05: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 06: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 07: (4) 1280x720p @ 60 Hz, Deep Color 36 bpp
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the GCP values</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the TMDS clock</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify the GCP values when default bit is set.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify the Hsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify the Vsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 08: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 09: (5) 1920x1080i @ 60 Hz, Deep Color 36 bpp
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the GCP values</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the TMDS clock</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify the GCP values when default bit is set.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify the Hsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify the Vsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 10: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 11: (16) 1920x1080p @ 60 Hz, Deep Color 36 bpp
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the GCP values</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the TMDS clock</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify the GCP values when default bit is set.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify the Hsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify the Vsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 12: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 13: (17,18) 720x576p @ 50 Hz, Deep Color 36 bpp
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the GCP values</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the TMDS clock</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify the GCP values when default bit is set.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify the Hsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify the Vsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 14: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 15: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 16: (19) 1280x720p @ 50 Hz, Deep Color 36 bpp
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the GCP values</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the TMDS clock</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify the GCP values when default bit is set.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify the Hsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify the Vsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 17: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 18: (20) 1920x1080i @ 50 Hz, Deep Color 36 bpp
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the GCP values</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the TMDS clock</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify the GCP values when default bit is set.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify the Hsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify the Vsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 19: 30 bpp is currently not supported (36 bpp only): Automatic PASS(SKIP)
+</td><td class="stskip">Skipped</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 20: (31) 1920x1080p @ 50 Hz, Deep Color 36 bpp
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Verify the GCP values</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Verify the TMDS clock</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify the GCP values when default bit is set.</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Verify the Hsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify the Vsync position, length and timings</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><br><a name="7-39"></a></p><table class="std"><tr><td class="cttest">Test 7-39<br><span class="cttest2">4K x 2K Video Format Timing</span></td>
+<td class="stpass">Pass</td></tr>
+<tr><td class="ctsub"><span class="bullet">&bull;</span> Iter 01: (1) 4K x 2K 29.97, 30 Hz
+<ul type="square">
+<li class="warn">WARNING: Not enough information for timing analysis
+</li>
+<li class="warn">WARNING: No Complete Video field captured
+</li>
+<li class="note">Image aspect ratio was visually verified by the Operator.
+</li>
+</ul>
+<table class="std">
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>01: Test VSI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>02: Test AVI occurrence every 2 video field</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>03: Verify Vendor Specific infoframe data fields</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>04: Test AVI params-ver, aspect ratio, vic, reserved</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="left noborder" colspan="2">
+<ul type="square">
+<li class="note">AVI aspect ratio = 16:9
+</li>
+</ul>
+</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>05: Verify pixel clock rate</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>06: Check HS and VS polarity</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>07: Verify HS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>08: Verify VIDEO_TO_HS</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>09: Verify H_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>10: Verify H_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>11: Verify VS_LEN</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>12: Verify V_ACTIVE</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>13: Verify V_TOTAL</span></td><td class="stpass">Pass</td></tr>
+<tr><td class="subtitle"><span class="bullet">&bull;</span> <span>14: Verify VS_TO_VIDEO</span></td><td class="stpass">Pass</td></tr>
+</table>
+</td><td class="stpass">Pass</td></tr>
+</table>
+<p><a name="envinfo"></a></p>
+<table class="std"><tr><td class="hdr">Test Equipment Information</td></tr>
+<tr><td class="subhdr">Instrument</td></tr>
+<tr><td class="left"><pre>    Name: 9801111
+    IP Address: 10.67.233.80
+    Net Mask: 255.255.254.0
+    Gateway IP: 10.67.232.1
+    Free Space: 131.93 GB of 162.23 GB (81.3%)
+    Version: 
+            Advanced Test platform Version: 4.18.10
+            HDMI 1.4 980 Protocol Analyzer [8AC5EE010000] in slot 3 [DDR 4096MB]:
+              Gateware: [Version: 4.14.1 Build Number: 55 (11/18/2015) Gen: 3 PCB: 297b/D]
+              Firmware: [Version: 4.18.10 Build Number: 11918 (qd 09/01/2016 08:37:26 CDT) ]
+            QDBUS: [Version: 2981  Build Number: 1 (07/05/2012 10.10101)]
+            HDMI 2.0 980 Protocol Analyzer [87DA46020000] in slot 6 [DDR 4096MB]:
+              Gateware: [Version: 4.18.1 Build Number: 1 (08/11/2016) Gen: 1 PCB: 594c/C]
+              Firmware: [Version: 4.18.10 Build Number: 11918 (qd 09/01/2016 08:37:26 CDT) ]
+            System Information:
+              System SN   : [ 675F8CEED0401A96::14030046]
+              HDMI PA SN  : [ 8AC5EE010000::N/A]
+              Main Board  : [      "DP67BG"]
+              CPUx2       : [    6.42.7 "Intel(R) Celeron(R) CPU G540 @ 2.50GHz"]
+              DDR         : [   3 GB + 512 MB]
+              HD          : [ SSDSC2CT18]
+              OS          : [ Linux xpscope-4a 2.6.26-2-686 #1 SMP Sun Mar 4 22:19:19 UTC 2012 i686 GNU/Linux]
+              GUI manager : [ Version 4.18.10_15910_201609010822]
+              1           : [ lo    inet 127.0.0.1/8 scope host lo]
+              2           : [ eth1    inet 192.168.10.1/24 brd 192.168.10.255 scope global eth1]
+              PCIE3       : [ 2.5x8]
+              HDMI SINK CT: [ 4.14.16]
+              HDMI SRC CT : [ 4.13.3]
+              HDCP2 SINK CT: [ 1.00.0]
+              HDCP SRC CT : [ 4.8.0]
+              HDMI 2.0 SRC CT: [ 1.0.4]
+              MHL SINK CT : [ 4.8.0]
+              MHL SRC CT  : [ 4.8.0]</pre></td></tr>
+<tr><td class="subhdr">Host</td></tr>
+<tr><td class="left"><pre>    UI Name: Quantum Data 980 Manager - Version 4.18.10
+    UI Home: platform:/base/plugins/com.quantumdata.i980.app2
+    Java Vendor: Null
+    Java Runtime: 1.8.0_40-b26
+    Java Home: C:\Program Files\Quantum Data\980 Manager 4.18.10\980mgr\jre\jre
+    OS: win32
+    OS Arch: x86
+    Locale: zh_CN
+    Free Space: 22.63 GB of 80.00 GB (28.3%)</pre></td></tr>
+</table>
+<p></p>
+<table id="footer" class="std">
+<tr><td class="left noborder">February 17, 2017 9:34 AM</td><td class="right noborder"><a href="http://www.quantumdata.com/">www.quantumdata.com</a></td></tr>
+</table>
+</body>
+</html>

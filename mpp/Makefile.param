@@ -1,0 +1,283 @@
+# Makefile.param 
+# Only global variable should be defined here.
+# All the variables must be used as "export" and "?=".
+# Otherwise, there will be some errors, when Makefile.param is nested.
+
+# Use this file as the following sample
+# ifeq ($(PARAM_FILE), )
+#     PARAM_FILE:=../Makefile.param
+#     include $(PARAM_FILE)
+# endif
+
+# Define the default OS link directory.
+export HIWORK_PATH?=/hiwork
+
+export ARCH=arm
+export MPP_BUILD=n
+
+# use HIARCH indicate chip, use libc to choose cross compiler.
+export HIARCH?=hi3531d
+export LIBC?=uclibc
+
+# linux
+export OSTYPE?=linux
+
+# Whether support the debug information. HI_DEBUG or HI_RELEASE
+export HIDBG?=HI_RELEASE
+
+# cpu type single/master/slave
+ifeq ($(HIARCH),hi3536)
+export CPU_TYPE?=
+else
+export CPU_TYPE?=single
+endif
+
+export ENV?=umap6
+
+# Whether open -g 
+export HIGDB?=n
+
+# FPGA board or not
+export FPGA?=n
+
+ifeq ($(HIARCH), )
+$(error HIARCH not defined! Please check!)
+endif
+
+ifeq ($(LIBC), )
+$(error LIBC not defined! Please check!)
+endif
+
+ifeq ($(OSTYPE), )
+$(error OSTYPE not defined! Please check!)
+endif
+
+ifeq ($(HIARCH),hi3536)
+	export HICHIP?=0x35360100
+	export ARCH_DIR?=hi3536
+endif
+ifeq ($(HIARCH),hi3521a)
+	export HICHIP?=0x3521a100
+	export ARCH_DIR?=hi3521a
+endif
+ifeq ($(HIARCH),hi3531a)
+	export HICHIP?=0x3531a100
+	export ARCH_DIR?=hi3531a
+endif
+#hi3521d_start
+ifeq ($(HIARCH),hi3521d)
+        export HICHIP?=0x3521d100
+        export ARCH_DIR?=hi3521d
+        export CONFIG_CHECK_DEV=y
+endif
+#hi3521d_end
+#hi3520dv400_start
+ifeq ($(HIARCH),hi3520dv400)
+        export HICHIP?=0x3520d400
+        export ARCH_DIR?=hi3521d
+        export CONFIG_CHECK_DEV=y
+endif
+#hi3520dv400_end
+ifeq ($(HIARCH),hi3536c)
+        export HICHIP?=0x3536c100
+        export ARCH_DIR?=hi3521d
+        export CONFIG_CHECK_DEV=y
+endif
+ifeq ($(HIARCH),hi3536dv100)
+        export HICHIP?=0x3536d100
+        export ARCH_DIR?=hi3536dv100
+        export CONFIG_CHECK_DEV=y
+endif
+
+#hi3531d_start
+ifeq ($(HIARCH),hi3531d)
+        export HICHIP?=0x3531d100
+        export ARCH_DIR?=hi3531d
+        export CONFIG_CHECK_DEV=y
+endif
+#hi3531d_end
+
+#ifeq ($(HIDBG),HI_DEBUG)
+#	DBG_FLAG=1
+#else
+	DBG_FLAG=0
+#endif
+
+export PRODUCT?=NVRDVR
+
+
+ifeq ($(FPGA),y)
+	export HI_FPGA:=HI_FPGA
+	export EXTDRV:=extdrv/$(ARCH_DIR)_fpga
+else
+	export HI_FPGA:=HI_XXXX
+	export EXTDRV:=extdrv/$(ARCH_DIR)
+endif
+
+# Get the local SDK_ROOT path or RELEASE_ROOT path by PARAM_FILE.
+# PARAM_FILE is configed at Makefile before include this file
+export PARAM_FILE
+export SDK_PATH?=$(shell cd $(shell pwd)/`dirname $(PARAM_FILE)`/..; pwd)
+export MPP_PATH?=$(shell cd $(shell pwd)/`dirname $(PARAM_FILE)`; pwd)
+export SHELF_ROOT?=$(MPP_PATH)/code/shelf
+export DRV_ROOT?=$(SDK_PATH)/drv
+export OSAL_ROOT?=$(SDK_PATH)/osal
+
+export MPP_CFLAGS:= -Wall
+
+ifeq ($(HIGDB), y)
+	MPP_CFLAGS += -g
+endif
+
+# Define the object output directory
+ifeq ($(MPP_BUILD), y)
+
+ifeq ($(HIARCH),hi3536)
+
+ifeq ($(FPGA), y)
+    REL_DIR=$(SDK_PATH)/mpp/release/$(HIARCH)/$(OSTYPE)/$(ENV)_$(CPU_TYPE)
+else
+    REL_DIR=$(SDK_PATH)/mpp/release/$(HIARCH)/$(OSTYPE)/$(CPU_TYPE)
+endif
+
+else
+    REL_DIR=$(SDK_PATH)/mpp/release/$(HIARCH)/$(OSTYPE)
+endif
+
+    SAMPLE_DIR=$(SDK_PATH)/mpp/sample/$(HIARCH)
+    MMZ_DIR=$(DRV_ROOT)/common/mmz
+else
+
+ifeq ($(HIARCH),hi3536)
+ifeq ($(FPGA), y)
+	REL_DIR=$(SDK_PATH)/mpp_$(ENV)_$(CPU_TYPE)
+else
+	REL_DIR=$(SDK_PATH)/mpp_$(CPU_TYPE)
+endif
+else
+	REL_DIR=$(SDK_PATH)/mpp
+endif
+
+    EXTDRV=extdrv
+    SAMPLE_DIR=$(REL_DIR)/sample
+    MMZ_DIR=$(DRV_ROOT)/mmz
+endif
+
+
+export MMZ_DIR
+
+
+
+
+###############################################################################
+# LIB GLOBAL CFLAGS
+ifeq ($(HIARCH),hi3521a)
+	export LIBS_CFLAGS    = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations
+	export LIBS_LD_CFLAGS = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations
+endif
+
+ifeq ($(HIARCH),hi3531a)
+	export LIBS_CFLAGS    = -mcpu=cortex-a9 -mfloat-abi=softfp -mfpu=neon -mno-unaligned-access -fno-aggressive-loop-optimizations
+	export LIBS_LD_CFLAGS = -mcpu=cortex-a9 -mfloat-abi=softfp -mfpu=neon -mno-unaligned-access -fno-aggressive-loop-optimizations
+endif
+
+#hi3521d_start
+ifeq ($(HIARCH),hi3521d)
+        export LIBS_CFLAGS    = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations -ffunction-sections
+        export LIBS_LD_CFLAGS = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations
+endif
+#hi3521d_end
+
+#hi3531d_start
+ifeq ($(HIARCH),hi3531d)
+        export LIBS_CFLAGS    = -mcpu=cortex-a9 -mfloat-abi=softfp -mfpu=neon -mno-unaligned-access -fno-aggressive-loop-optimizations -ffunction-sections
+        export LIBS_LD_CFLAGS = -mcpu=cortex-a9 -mfloat-abi=softfp -mfpu=neon -mno-unaligned-access -fno-aggressive-loop-optimizations 
+endif
+#hi3531d_end
+
+ifeq ($(HIARCH),hi3536c)
+        export LIBS_CFLAGS    = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations -ffunction-sections
+        export LIBS_LD_CFLAGS = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations
+endif
+ifeq ($(HIARCH),hi3536dv100)
+        export LIBS_CFLAGS    = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations -ffunction-sections
+        export LIBS_LD_CFLAGS = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations
+endif
+
+ifeq ($(HIARCH),hi3536)
+    ifeq ($(CPU_TYPE), slave)
+	export LIBS_CFLAGS = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -ffunction-sections -mno-unaligned-access -fno-aggressive-loop-optimizations
+	export LIBS_LD_CFLAGS = -mcpu=cortex-a7 -mfloat-abi=softfp -mfpu=neon-vfpv4 -ffunction-sections -mno-unaligned-access -fno-aggressive-loop-optimizations
+    else
+	ifeq ($(FPGA),y)
+		export LIBS_CFLAGS = -march=armv7-a -mfloat-abi=softfp -ffunction-sections
+		export LIBS_LD_CFLAGS = -march=armv7-a -mfloat-abi=softfp -ffunction-sections
+	else
+		export LIBS_CFLAGS = -march=armv7-a -mfloat-abi=softfp -mfpu=neon-vfpv4 -ffunction-sections -mno-unaligned-access -fno-aggressive-loop-optimizations
+		export LIBS_LD_CFLAGS = -march=armv7-a -mfloat-abi=softfp -mfpu=neon-vfpv4 -ffunction-sections -mno-unaligned-access -fno-aggressive-loop-optimizations
+	endif
+    endif
+endif
+
+LIBS_CFLAGS += -fstack-protector 
+LIBS_LD_CFLAGS += -fstack-protector -Wl,-z,relro -Wl,-z,noexecstack -fPIC
+
+###############################################################################
+
+#********************* Macro for version management***************************** 
+VER_X ?= 1
+VER_Y ?= 0
+VER_Z ?= 0
+VER_P ?= 0
+VER_B ?= 10
+MPP_CFLAGS += -DVER_X=$(VER_X) -DVER_Y=$(VER_Y) -DVER_Z=$(VER_Z) -DVER_P=$(VER_P) -DVER_B=$(VER_B)
+#******************************************************************************* 
+
+# include the config file of platform
+-include $(SDK_PATH)/mpp/configs/config.mk
+
+# include the config file of platform
+include $(MPP_PATH)/$(OSTYPE).param
+
+# Define the param of audio 
+export AUDIO_PATH?=$(MPP_PATH)/component/audio/lib/$(CROSS)/$(OSTYPE)
+
+export AUDIO_LIBA ?= $(REL_LIB)/libVoiceEngine.a\
+	             $(REL_LIB)/libupvqe.a\
+		     $(REL_LIB)/libdnvqe.a
+				 
+export AUDIO_LIBS ?= $(REL_LIB)/libVoiceEngine.so\
+	             $(REL_LIB)/libupvqe.so\
+		     $(REL_LIB)/libdnvqe.so
+				
+
+# include the audio config file of platform
+
+#
+#export HIMEM_LIBA := $(REL_LIB)/libmem.a
+
+## Define the lib of jpeg codec
+export JPEGD_PATH?=$(SDK_PATH)/mpp/component/jpegd
+export JPEGD_LIBA:=$(REL_LIB)/libjpeg.a
+export JPEGD_LIBS:=$(REL_LIB)/libjpeg.so
+
+ifeq ($(CONFIG_JPEGEDCF), y)
+	MPP_CFLAGS += -DENABLE_JPEGEDCF 
+endif	
+
+ifeq ($(CONFIG_JPEGEOSD), n)
+	MPP_CFLAGS += -DDISABLE_JPEGEOSD 
+endif
+
+ifeq ($(CONFIG_WBC), y)
+	MPP_CFLAGS += -DCONFIG_SUPPORT_WBC
+endif
+
+ifeq ($(CONFIG_CASCADE), y)
+	MPP_CFLAGS += -DCONFIG_SUPPORT_CASCADE
+endif
+
+ifeq ($(CONFIG_LOWDELAY), y)
+         MPP_CFLAGS += -DENABLE_LOWDELAY
+endif
+# End!!

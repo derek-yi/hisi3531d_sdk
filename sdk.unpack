@@ -1,0 +1,49 @@
+#!/bin/sh
+source scripts/common.sh
+
+ECHO "Unpacking SDK" COLOR_YELLOW
+
+WARN "Be sure you have installed the cross-compiler. if not, install it first!"
+WARN "ALL THE SOUCE FILES WILL BE OVERWRITED, FILES YOU MOTIFIED WILL BE LOST !!!"
+ECHO ""
+
+#ECHO "To continue, type 'Yes' and then press ENTER ..."
+
+#read choice
+#[ x$choice != xYes ] && exit 1
+
+set +e
+
+#ECHO "install cross toolchain"
+#./tools/toolchains/cross.install
+
+#======================================================================================
+ECHO "unpacking osal"
+mkdir -p osal/
+run_command_progress_float "tar -xvzf package/osal.tgz" 0 "tar -tzf package/osal.tgz | wc -l"
+
+#======================================================================================
+ECHO "unpacking osdrv"
+mkdir -p osdrv/
+run_command_progress_float "tar -xvzf package/osdrv.tgz" 0 "tar -tzf package/osdrv.tgz | wc -l"
+
+#======================================================================================
+ECHO "try to unpacking kernel"
+mkdir -p osdrv/
+LINUX_FILE=osdrv/opensource/kernel/$LINUX_VER.tgz
+if [ -f "$LINUX_FILE" ]; then
+run_command_progress_float "tar -xvzf $LINUX_FILE -C osdrv/opensource/kernel/" 0 "tar -tzf $LINUX_FILE | wc -l"
+else
+echo "osdrv/opensource/kernel/$LINUX_VER.tgz not exist, still continue-------"
+fi
+
+#======================================================================================
+ECHO "unpacking mpp"
+mkdir -pv mpp
+run_command_progress_float "tar -xvzf package/mpp.tgz" 0 "tar -tzf package/mpp.tgz | wc -l"
+
+#======================================================================================
+ECHO "unpacking drv"
+mkdir -pv drv
+run_command_progress_float "tar -xvzf package/drv.tgz" 0 "tar -tzf package/drv.tgz | wc -l"
+

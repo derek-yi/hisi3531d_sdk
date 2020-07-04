@@ -1,0 +1,42 @@
+# Hisilicon mpp sample Makefile.param
+
+ifeq ($(PARAM_FILE), )
+     PARAM_FILE:=../../Makefile.param
+     include $(PARAM_FILE)
+endif
+
+COMMON_DIR:=$(PWD)/../common
+MPI_LIBS := $(REL_LIB)/libmpi.a $(REL_LIB)/libhdmi.a $(REL_LIB)/libjpeg.a
+
+INC_FLAGS := -I$(REL_INC) -I$(COMMON_DIR) 
+INC_FLAGS += -I$(SDK_PATH)/mpp/$(EXTDRV)/tlv320aic31
+INC_FLAGS += -I$(SDK_PATH)/mpp/$(EXTDRV)/tp2853c
+INC_FLAGS += -I$(SDK_PATH)/mpp/$(EXTDRV)/nvp6134_ex
+INC_FLAGS += -I$(PWD)/../audio/adp
+CFLAGS := -Wall -g $(INC_FLAGS) -D$(HIARCH) -DHICHIP=$(HICHIP) -D$(HIDBG) -D$(HI_FPGA) -lpthread -lm -ldl
+
+################ select audio codec type for your sample ################
+#external acodec
+#ACODEC_TYPE ?= ACODEC_TYPE_TP2823
+ACODEC_TYPE ?= ACODEC_TYPE_NVP6134
+
+INNER_HDMI ?= y
+
+CFLAGS += -DAI_DEV=1
+CFLAGS += -DAO_DEV=0
+
+ifeq ($(ACODEC_TYPE), ACODEC_TYPE_TP2823)
+	CFLAGS += -DHI_ACODEC_TYPE_TP2823
+endif
+
+ifeq ($(ACODEC_TYPE), ACODEC_TYPE_NVP6134)
+        CFLAGS += -DHI_ACODEC_TYPE_NVP6134
+endif
+
+ifeq ($(INNER_HDMI), y)
+	CFLAGS += -DHI_ACODEC_TYPE_HDMI
+endif
+#########################################################################
+
+COMM_SRC := $(wildcard $(COMMON_DIR)/*.c)
+COMM_OBJ := $(COMM_SRC:%.c=%.o)

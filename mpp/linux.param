@@ -1,0 +1,59 @@
+# use C01 to indicate uclibc, C02 to  indicate glibc, C00 to indicate FPGA.
+ifeq ($(LIBC),glibc)
+    ifeq ($(FPGA), y)
+	export CVER?=.C$(DBG_FLAG)3
+    else
+	export CVER?=.C$(DBG_FLAG)2
+    endif
+else ifeq ($(FPGA), y)
+	export CVER?=.C$(DBG_FLAG)0
+else
+	export CVER?=.C$(DBG_FLAG)1
+endif
+
+# Allocated the linux position
+ifeq ($(HIARCH), $(filter $(HIARCH), hi3531d hi3521d hi3520dv400 hi3536c))
+	KERNEL_NAME="linux-3.18.y"
+else
+	KERNEL_NAME="linux-4.9.y"
+endif
+
+
+ifeq ($(MPP_BUILD), y)
+	export LINUX_ROOT?=$(HIWORK_PATH)/osdrv$(HIARCH)$(CVER)/opensource/kernel/$(KERNEL_NAME)
+else
+	export LINUX_ROOT?=$(SDK_PATH)/osdrv/opensource/kernel/$(KERNEL_NAME)
+endif
+
+export KERNEL_ROOT=$(LINUX_ROOT)
+# Define cross compiler
+ifeq ($(LIBC),uclibc)
+	ifeq ($(HIARCH), $(filter $(HIARCH), hi3531d hi3521d hi3520dv400 hi3536c))
+		export CROSS_COMPILE?=arm-hisiv500-linux-
+		export CROSS?=arm-hisiv500-linux-
+	else 
+		export CROSS_COMPILE?=arm-hisiv510-linux-
+		export CROSS?=arm-hisiv510-linux-
+	endif
+else
+	ifeq ($(HIARCH), $(filter $(HIARCH), hi3531d hi3521d hi3520dv400 hi3536c))
+		export CROSS_COMPILE?=arm-hisiv600-linux-
+		export CROSS?=arm-hisiv600-linux-
+	else
+		export CROSS_COMPILE?=arm-hisiv610-linux-
+		export CROSS?=arm-hisiv610-linux-
+	endif
+endif
+
+
+
+export CC:=$(CROSS)gcc
+export AR:=$(CROSS)ar
+
+export REL_INC := $(REL_DIR)/include
+export REL_LIB := $(REL_DIR)/lib
+export REL_KO  := $(REL_DIR)/ko
+export REL_INI := $(REL_DIR)/init
+export REL_OBJ := $(REL_DIR)/obj
+
+MPP_CFLAGS +=-Wno-date-time  
